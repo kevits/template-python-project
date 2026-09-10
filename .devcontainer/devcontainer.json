@@ -1,0 +1,49 @@
+{
+    "name": "Template Python Project",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "devcontainer",
+    "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python-envs.terminal.autoActivationType": "shellStartup"
+            },
+            "extensions": [
+                "github.copilot-chat",
+                "zxchhh.jetbrains-dark-new-ui",
+                "vscode-icons-team.vscode-icons",
+                "task.vscode-task",
+                // Development
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.debugpy",
+                "ms-python.vscode-python-envs",
+                // Productivity, docs, and formatting
+                "charliermarsh.ruff",
+                "astral-sh.ty",
+                "tamasfe.even-better-toml",
+                "redhat.vscode-yaml",
+                "yzhang.markdown-all-in-one",
+                // "DavidAnson.vscode-markdownlint"
+                "christian-kohler.path-intellisense"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "username": "vscode"
+        },
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "remoteUser": "vscode",
+    // "containerUser": "vscode",
+    // "updateRemoteUserUID": true,
+    "postCreateCommand": {
+        "Initialize environment": "zsh ./.devcontainer/post-create.sh"
+    }
+    // "postAttachCommand": {
+    //     "Change workspace folder owner": "sudo chown -R vscode:vscode /workspaces",
+    //     "Install dependencies": "uv sync"
+    // },
+    // "waitFor": "postCreateCommand"
+}

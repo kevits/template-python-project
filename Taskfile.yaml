@@ -1,0 +1,14 @@
+version: "3"
+
+tasks:
+  check:
+    desc: "Check code formatting and linting"
+    cmds:
+      - uv run ruff format --check
+      - uv run ruff check
+
+  format:
+    desc: "Format files"
+    cmds:
+      - uv run ruff format
+      - uv run ruff check --fix-only

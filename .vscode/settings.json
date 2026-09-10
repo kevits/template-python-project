@@ -1,0 +1,36 @@
+{
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.formatOnType": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "always",
+            "source.organizeImports": "always",
+        },
+        "editor.rulers": [120],
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.formatOnSave": true
+    },
+    "[dockerfile]": {
+        "editor.rulers": [120]
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.preferredDarkColorTheme": "JetBrains Dark (New UI)",
+    "workbench.preferredLightColorTheme": "JetBrains Dark (New UI)",
+    "remote.restoreForwardedPorts": false,
+    "remote.autoForwardPortsFallback": 0,
+    "ruff.configuration": "${workspaceFolder}/pyproject.toml",
+    "ruff.nativeServer": "on",
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "debug.internalConsoleOptions": "neverOpen",
+    "debug.closeReadonlyTabsOnEnd": true,
+    "terminal.integrated.env.linux": {
+        "WORKSPACE_FOLDER": "${workspaceFolder}",
+    },
+    "terminal.integrated.stickyScroll.enabled": false
+}

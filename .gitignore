@@ -1,0 +1,7 @@
+__pycache__/
+.env.local
+.venv/
+
+# Scratch folder
+scratch/**
+!scratch/README.md

@@ -1,0 +1,22 @@
+name: template-python-project
+
+services:
+  devcontainer:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    # env_file:
+    #   - path: ../.env
+    #     required: true
+    #   - path: ../.env.local
+    #     required: false
+    container_name: devcontainer-template-python-project
+    # network_mode: host
+    volumes:
+      - "..:/workspace/template-python-project:rw,cached"
+      # - "cache-uv:/home/vscode/.cache/uv"
+    command: sleep infinity
+    # command: ["sh", "-c", "chown -R vscode:vscode /home/vscode/.cache && exec sleep infinity"]
+
+# volumes:
+#   cache-uv:
