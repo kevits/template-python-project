@@ -11,6 +11,7 @@
 #git config --global --add safe.directory /workspace
 
 echo "Install uv dependencies"
+uv venv .
 uv sync
 
 echo "Upgrading pip"

@@ -1,36 +1,64 @@
 {
+    "[dockerfile]": {
+        "editor.rulers": [
+            120
+        ]
+    },
+    // "[markdown]": {
+    //     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    //     "editor.formatOnSave": true
+    // },
     "[python]": {
-        "editor.formatOnSave": true,
-        "editor.formatOnPaste": true,
-        "editor.formatOnType": true,
         "editor.codeActionsOnSave": {
             "source.fixAll.ruff": "always",
             "source.organizeImports": "always",
         },
-        "editor.rulers": [120],
-        "editor.defaultFormatter": "charliermarsh.ruff"
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            120
+        ],
     },
-    "[markdown]": {
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-        "editor.formatOnSave": true
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
-    "[dockerfile]": {
-        "editor.rulers": [120]
+    "debug.internalConsoleOptions": "neverOpen",
+    "debug.closeReadonlyTabsOnEnd": true,
+    "evenBetterToml.formatter.alignComments": true,
+    "evenBetterToml.formatter.alignEntries": true,
+    "evenBetterToml.formatter.allowedBlankLines": 2,
+    "evenBetterToml.formatter.arrayAutoCollapse": true,
+    "evenBetterToml.formatter.arrayTrailingComma": true,
+    "evenBetterToml.formatter.columnWidth": 120,
+    "evenBetterToml.formatter.trailingNewline": true,
+    "files.exclude": {
+        "**/__pycache__": true
     },
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.preferredDarkColorTheme": "JetBrains Dark (New UI)",
-    "workbench.preferredLightColorTheme": "JetBrains Dark (New UI)",
+    "files.trimTrailingWhitespace": true,
+    "git-blame.config.inlineBlame.hoverMessage.activeLine": false,
+    "git-blame.config.inlineBlameHoverMessage": true,
+    "git-blame.config.inlineBlameStartColumn": 120,
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "file": ".commit-message-instructions.md"
+        },
+    ],
+    "python.analysis.inlayHints.callArgumentNames": "off",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.env.linux": {
+        "WORKSPACE_FOLDER": "${workspaceFolder}",
+    },
+    "terminal.integrated.stickyScroll.enabled": false,
+    "ty.inlayHints.callArgumentNames": false,
     "remote.restoreForwardedPorts": false,
     "remote.autoForwardPortsFallback": 0,
     "ruff.configuration": "${workspaceFolder}/pyproject.toml",
     "ruff.nativeServer": "on",
-    "files.exclude": {
-        "**/__pycache__": true
-    },
-    "debug.internalConsoleOptions": "neverOpen",
-    "debug.closeReadonlyTabsOnEnd": true,
-    "terminal.integrated.env.linux": {
-        "WORKSPACE_FOLDER": "${workspaceFolder}",
-    },
-    "terminal.integrated.stickyScroll.enabled": false
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.preferredDarkColorTheme": "JetBrains Dark (New UI)",
+    "workbench.preferredLightColorTheme": "JetBrains Dark (New UI)",
 }

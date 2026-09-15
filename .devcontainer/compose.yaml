@@ -1,4 +1,4 @@
-name: template-python-project
+name: ${COMPOSE_PROJECT_NAME}
 
 services:
   devcontainer:
@@ -10,10 +10,10 @@ services:
     #     required: true
     #   - path: ../.env.local
     #     required: false
-    container_name: devcontainer-template-python-project
+    container_name: devcontainer-${COMPOSE_PROJECT_NAME}
     # network_mode: host
     volumes:
-      - "..:/workspace/template-python-project:rw,cached"
+      - "..:/workspace/${COMPOSE_PROJECT_NAME}:rw,cached"
       # - "cache-uv:/home/vscode/.cache/uv"
     command: sleep infinity
     # command: ["sh", "-c", "chown -R vscode:vscode /home/vscode/.cache && exec sleep infinity"]

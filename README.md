@@ -3,10 +3,11 @@
 
 ## Renaming
 
-| Filename | Field | Value | New |
-| -------- | ----- | ----- | --- |
-| sd       | sd    | fgf   | sds |
+The following fields or variables should be updated to project-specific values.
 
-- `.devcontainer/devcontainer.json`
-  - name: `Template Python Project`
-  - service: `devcontainer-template-python-project`
+| Filename                          | Field/Variable       |
+| --------------------------------- | -------------------- |
+| `.devcontainer/.env`              | COMPOSE_PROJECT_NAME |
+| `.devcontainer/devcontainer.json` | name                 |
+| `pyproject.toml`                  | project.name         |
+| `pyproject.toml`                  | project.description  |

@@ -1,6 +1,10 @@
 version: "3"
 
 tasks:
+  default:
+    silent: true
+    cmd: "{{.TASK_EXE}} --list"
+
   check:
     desc: "Check code formatting and linting"
     cmds:
@@ -12,3 +16,13 @@ tasks:
     cmds:
       - uv run ruff format
       - uv run ruff check --fix-only
+
+  test:
+    desc: "Run tests"
+    cmd: uv run pytest tests/test_main.py
+    
+  # Can be deleted, for demonstration purposes only
+  hello:
+    desc: "Run the hello world script"
+    cmd: uv run python -m app.main
+
