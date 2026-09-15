@@ -53,5 +53,5 @@ antigen apply
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
-# To customize your prompt, run `p10k configure` and edit ~/.p10k.zsh
+# To customize your prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
