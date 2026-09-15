@@ -1,6 +1,7 @@
-__pycache__/
+__pycache__
+.cache
 .env.local
-.venv/
+.venv
 
 # Scratch folder
 scratch/**
