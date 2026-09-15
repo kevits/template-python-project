@@ -5,11 +5,9 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
-    # env_file:
-    #   - path: ../.env
-    #     required: true
-    #   - path: ../.env.local
-    #     required: false
+    env_file:
+      - path: .env.local
+        required: false
     container_name: devcontainer-${COMPOSE_PROJECT_NAME}
     # network_mode: host
     volumes:
