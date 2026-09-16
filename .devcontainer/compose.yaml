@@ -8,10 +8,10 @@ services:
     env_file:
       - path: .env.local
         required: false
-    container_name: devcontainer-${COMPOSE_PROJECT_NAME}
+    container_name: devcontainer-${COMPOSE_DEVCONTAINER_PREFIX}
     # network_mode: host
     volumes:
-      - "..:/workspace/${COMPOSE_PROJECT_NAME}:rw,cached"
+      - "..:/workspace/${WORKSPACE_FOLDER_NAME}:rw,cached"
       # - "cache-uv:/home/vscode/.cache/uv"
     command: sleep infinity
     # command: ["sh", "-c", "chown -R vscode:vscode /home/vscode/.cache && exec sleep infinity"]

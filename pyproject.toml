@@ -1,10 +1,10 @@
 [project]
-name = "app"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
+name            = "app"
+version         = "0.1.0"
+description     = "Add your description here"
+readme          = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies    = []
 
 [dependency-groups]
 dev = [
@@ -18,7 +18,7 @@ dev = [
 ]
 
 [build-system]
-requires = ["uv_build>=0.12.13,<0.13.0"]
+requires      = ["uv_build>=0.12.13,<0.13.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
@@ -36,16 +36,45 @@ default-groups = ["dev"]
 # ==============================
 
 [tool.ruff]
-cache-dir = ".cache/ruff"
+cache-dir      = ".cache/ruff"
 extend-exclude = [".cache"]
-indent-width = 4
-line-length = 120
-src = ["src"]
+indent-width   = 4
+line-length    = 120
+src            = ["src"]
 
 [tool.ruff.format]
 indent-style = "space"
-line-ending = "auto"
-quote-style = "double"
+line-ending  = "auto"
+quote-style  = "double"
+skip-magic-trailing-comma  = false
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle: Check Python code against style conventions in PEP 8
+    "F",      # Pyflakes: Checks Python source files for errors
+    "I",      # isort: Sorts imports
+    "W",      # pycodestyle
+    "N",      # pep8-naming: Checks the code against PEP 8 naming conventions
+    "UP",     # PyUpgrade - will show hints for deprecated syntax in python 3.11
+    "ANN001", # Missing type annotation for function arguments
+    "ANN201", # Missing return type annotation for public function
+    "ASYNC",  # Flake8-async: Checks for asynchronous code issues
+    "B",      # Fake8-bugbear: Finds likely bugs and design problems in your program
+    "S",      # Flake8-bandit: Security-oriented linting
+    "C4",     # Flake8-comprehensions: Checks for list/set/dict comprehension issues
+    "DTZ",    # Flake8-datetimez: Checks for datetime-related issues
+    "ICN",    # Flake8-import-conventions: Checks import conventions
+    "LOG",    # Flake8-logging: Checks logging practices
+    "G",      # Flake8-logging-format: Checks logging format strings
+    "T20",    # Flake8-print: Checks for print statements
+    "PT",     # Flake8-pytest-style: Checks for pytest best practices
+    "SLF001", # Flake8-self: Checks for proper usage of self in class methods
+    "SIM",    # flake8-simplify: Helps to simplify code
+    "TID",    # Flake8-tidy-imports: Checks for tidy import statements
+    "PTH",    # Flake8-use-pathlib: Encourages the use of pathlib over os.path
+    "PERF",   # Perflint: Checks for performance issues
+    "RUF",    # Ruff: Runs Ruff linter
+]
 
 # ==============================
 # pytest Configuration
@@ -59,6 +88,6 @@ testpaths = ["tests"]
 # ==============================
 
 [tool.coverage.report]
-fail_under = 80
+fail_under   = 80
 show_missing = true
 skip_covered = true

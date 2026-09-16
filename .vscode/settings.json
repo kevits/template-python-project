@@ -4,10 +4,10 @@
             120
         ]
     },
-    // "[markdown]": {
-    //     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-    //     "editor.formatOnSave": true
-    // },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.formatOnSave": true
+    },
     "[python]": {
         "editor.codeActionsOnSave": {
             "source.fixAll.ruff": "always",
@@ -40,6 +40,7 @@
     "git-blame.config.inlineBlame.hoverMessage.activeLine": false,
     "git-blame.config.inlineBlameHoverMessage": true,
     "git-blame.config.inlineBlameStartColumn": 120,
+    "git-blame.config.showBlameInline": false,
     "github.copilot.chat.commitMessageGeneration.instructions": [
         {
             "file": ".commit-message-instructions.md"
