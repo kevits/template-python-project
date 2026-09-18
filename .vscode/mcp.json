@@ -6,6 +6,13 @@
       "headers": {
         "Authorization": "Bearer ${env:MCP_CONTEXT7_API_KEY}"
       }
+    },
+    "code-reasoning": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mettamatt/code-reasoning"
+      ]
     }
   }
 }
