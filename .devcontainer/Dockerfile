@@ -4,11 +4,11 @@ FROM python@sha256:3df083612dec28cf1456da4f38064469561fc2e55da4ebf47e9f0110c62f8
 # Install Node.js 24 with NVM
 ENV NVM_DIR=/usr/local/share/nvm
 ENV NODE_VERSION=24
-ENV PATH="$NVM_DIR/current:$PATH"
+ENV PATH="$NVM_DIR/current/bin:$PATH"
 RUN mkdir -p "$NVM_DIR" \
     && curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.7/install.sh | PROFILE=/dev/null bash \
     && . "$NVM_DIR/nvm.sh" \
-    && nvm install "$NODE_VERSION" \
+    && NVM_SYMLINK_CURRENT=true nvm install "$NODE_VERSION" \
     && nvm alias default "$NODE_VERSION"
 
 FROM base AS requirements
