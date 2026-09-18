@@ -8,7 +8,7 @@ services:
     env_file:
       - path: .env.local
         required: false
-    container_name: devcontainer-${COMPOSE_DEVCONTAINER_PREFIX}
+    container_name: devcontainer-${COMPOSE_DEVCONTAINER_SUFFIX}
     # network_mode: host
     volumes:
       - "..:/workspace/${WORKSPACE_FOLDER_NAME}:rw,cached"
