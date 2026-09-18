@@ -17,6 +17,7 @@ ZSH_THEME="devcontainers"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
 
+source $NVM_DIR/nvm.sh
 source $ZSH/oh-my-zsh.sh
 source $HOME/antigen.zsh
 
