@@ -46,9 +46,44 @@
             "file": ".commit-message-instructions.md"
         },
     ],
+    "highlight.regexes": {
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:[\\t\\f\\v ]*\\([^\\r\\n)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^\\r\\n:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\r\\n@]*?)(?= *(?:[^\\r\\n:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^\\r\\n@]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#fdd85d",
+                    "color": "#fdd85d",
+                    "fontWeight": "bold"
+                },
+                {
+                    "color": "#fdd85d",
+                    "fontStyle": "italic"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:[\\t\\f\\v ]*\\([^\\r\\n)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^\\r\\n:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\r\\n@]*?)(?= *(?:[^\\r\\n:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^\\r\\n@]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#d0514e",
+                    "backgroundColor": "#d0514e",
+                    "color": "#000000",
+                    "fontWeight": "bold",
+                    "borderRadius": "4px 0px 0px 4px"
+                },
+                {
+                    "backgroundColor": "#d0514e",
+                    "color": "#000000",
+                    "fontStyle": "italic",
+                    "borderRadius": "0px 4px 4px 0px"
+                }
+            ]
+        }
+    },
     "python.analysis.inlayHints.callArgumentNames": "off",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "basic",
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.env.linux": {
         "WORKSPACE_FOLDER": "${workspaceFolder}",

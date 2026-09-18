@@ -31,12 +31,13 @@
                 "astral-sh.ty", // Extension for ty, an fast type checker and language server
                 "charliermarsh.ruff", // Extension for Ruff
                 "christian-kohler.path-intellisense", // Autocompletes filenames
-                // "hediet.vscode-drawio", // Unofficial Draw.io extension
-                // "janisdd.vscode-edit-csv", // Edit CSV files
-                // "jebbs.plantuml", // PlantUML integration for UML diagrams
+                "fabiospampinato.vscode-highlight", // Advanced text highlighter
                 "redhat.vscode-yaml", // YAML language support
                 "tamasfe.even-better-toml", // Syntax highlighting and formatting of TOML files
                 "yzhang.markdown-all-in-one" // Markdown extension
+                // "hediet.vscode-drawio", // Unofficial Draw.io extension
+                // "janisdd.vscode-edit-csv", // Edit CSV files
+                // "jebbs.plantuml", // PlantUML integration for UML diagrams
             ]
         }
     },
